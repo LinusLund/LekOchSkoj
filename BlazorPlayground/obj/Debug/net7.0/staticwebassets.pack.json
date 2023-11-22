@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\erick\\OneDrive\\Skrivbord\\Blazor Play\\BlazorPlayground\\BlazorPlayground\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorPlayground.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BlazorPlayground.props",
+      "PackagePath": "build\\BlazorPlayground.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorPlayground.props",
+      "PackagePath": "buildMultiTargeting\\BlazorPlayground.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BlazorPlayground.props",
+      "PackagePath": "buildTransitive\\BlazorPlayground.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
