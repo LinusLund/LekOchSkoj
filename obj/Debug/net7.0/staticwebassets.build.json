@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "HH3o9ZUcpr6Y1tV3KCNXF5nORlWyrC1cghMLoHUZUYY=",
+  "Source": "EmptyBlazorApp1",
+  "BasePath": "_content/EmptyBlazorApp1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmptyBlazorApp1\\wwwroot",
+      "Source": "EmptyBlazorApp1",
+      "ContentRoot": "C:\\Users\\oskli\\OneDrive\\Skrivbord\\UnoDrive\\blazorPractice\\EmptyBlazorApp1\\wwwroot\\",
+      "BasePath": "_content/EmptyBlazorApp1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\oskli\\OneDrive\\Skrivbord\\UnoDrive\\blazorPractice\\EmptyBlazorApp1\\wwwroot\\css\\site.css",
+      "SourceId": "EmptyBlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\oskli\\OneDrive\\Skrivbord\\UnoDrive\\blazorPractice\\EmptyBlazorApp1\\wwwroot\\",
+      "BasePath": "_content/EmptyBlazorApp1",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ]
+}

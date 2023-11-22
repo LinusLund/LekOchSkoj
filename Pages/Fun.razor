@@ -1,0 +1,33 @@
+﻿@page "/fun"
+
+
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" @onclick="IncrementCount">Click me</button>
+
+<NavLink href="#" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+    That's Enough Fun For Today! Please Take Me Home :)
+</NavLink>
+
+@if (currentCount % 5 == 0 && currentCount > 0)
+{
+    <p>You've clicked @currentCount times! WE'RE HAVING SO MUCH FUN :D</p>
+}
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+
+        // Visa meddelande var femte klick
+        if (currentCount % 5 == 0 && currentCount > 0)
+        {
+            // Här kan du lägga till ytterligare logik eller visa andra meddelanden om det behövs.
+            // I detta fall visas ett enkelt meddelande.
+            Console.WriteLine($"You've clicked {currentCount} times!");
+        }
+    }
+}
