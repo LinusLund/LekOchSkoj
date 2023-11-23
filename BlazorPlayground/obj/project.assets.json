@@ -8,23 +8,23 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\oskli\\.nuget\\packages\\": {},
+    "C:\\Users\\Linus Lund\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oskli\\OneDrive\\Skrivbord\\UnoDrive\\blazorPractice\\WeCanSamarbeta\\BlazorPlayground\\BlazorPlayground.csproj",
+      "projectUniqueName": "C:\\Users\\Linus Lund\\Source\\Repos\\LekOchSkoj\\BlazorPlayground\\BlazorPlayground.csproj",
       "projectName": "BlazorPlayground",
-      "projectPath": "C:\\Users\\oskli\\OneDrive\\Skrivbord\\UnoDrive\\blazorPractice\\WeCanSamarbeta\\BlazorPlayground\\BlazorPlayground.csproj",
-      "packagesPath": "C:\\Users\\oskli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oskli\\OneDrive\\Skrivbord\\UnoDrive\\blazorPractice\\WeCanSamarbeta\\BlazorPlayground\\obj\\",
+      "projectPath": "C:\\Users\\Linus Lund\\Source\\Repos\\LekOchSkoj\\BlazorPlayground\\BlazorPlayground.csproj",
+      "packagesPath": "C:\\Users\\Linus Lund\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Linus Lund\\Source\\Repos\\LekOchSkoj\\BlazorPlayground\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\oskli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Linus Lund\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -34,6 +34,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -70,7 +71,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
