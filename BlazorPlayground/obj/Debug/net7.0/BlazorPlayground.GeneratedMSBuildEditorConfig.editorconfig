@@ -9,39 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorPlayground
 build_property.RootNamespace = BlazorPlayground
-build_property.ProjectDir = C:\Users\oskli\OneDrive\Skrivbord\UnoDrive\blazorPractice\WeCanSamarbeta\BlazorPlayground\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\Linus Lund\Source\Repos\LekOchSkoj\BlazorPlayground\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\oskli\OneDrive\Skrivbord\UnoDrive\blazorPractice\WeCanSamarbeta\BlazorPlayground
+build_property.MSBuildProjectDirectory = C:\Users\Linus Lund\Source\Repos\LekOchSkoj\BlazorPlayground
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/App.razor]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/MainLayout.razor]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/Pages/Close.razor]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/Pages/Close.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xvc2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/Pages/CreateReceipt.razor]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/Pages/CreateReceipt.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUmVjZWlwdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/Pages/Index.razor]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/_Imports.razor]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oskli/OneDrive/Skrivbord/UnoDrive/blazorPractice/WeCanSamarbeta/BlazorPlayground/Pages/_Host.cshtml]
+[C:/Users/Linus Lund/Source/Repos/LekOchSkoj/BlazorPlayground/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
