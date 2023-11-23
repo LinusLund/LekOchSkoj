@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DFtuuiJbQCoIZ4NuP4yMiBdSxNqIRx5Ip90ca3yCgkA=",
+  "Hash": "2EfT50/ihcmveDEfTTk/ZaCl2Ep/6F+reJ1wQyJBmdI=",
   "Source": "BlazorPlayground",
   "BasePath": "_content/BlazorPlayground",
   "Mode": "Default",
@@ -10,22 +10,24 @@
     {
       "Name": "BlazorPlayground\\wwwroot",
       "Source": "BlazorPlayground",
-      "ContentRoot": "C:\\Users\\Linus Lund\\Source\\Repos\\LekOchSkoj\\BlazorPlayground\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\erick\\OneDrive\\Skrivbord\\Blazor Play\\BlazorPhoenix\\BlazorPlayground\\wwwroot\\",
       "BasePath": "_content/BlazorPlayground",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Linus Lund\\Source\\Repos\\LekOchSkoj\\BlazorPlayground\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\erick\\OneDrive\\Skrivbord\\Blazor Play\\BlazorPhoenix\\BlazorPlayground\\wwwroot\\css\\site.css",
       "SourceId": "BlazorPlayground",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Linus Lund\\Source\\Repos\\LekOchSkoj\\BlazorPlayground\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\erick\\OneDrive\\Skrivbord\\Blazor Play\\BlazorPhoenix\\BlazorPlayground\\wwwroot\\",
       "BasePath": "_content/BlazorPlayground",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",

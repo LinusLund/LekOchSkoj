@@ -1,5 +1,275 @@
 ﻿@page "/createReceipt"
 
-@code {
+<section class="bg-gray-100 min-h-screen py-8">
+    <div class="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-md md:flex md:flex-wrap">
 
+        <!-- Företagsinformation -->
+        <h2 class="text-2xl font-semibold mb-4 w-full">Företagsinformation</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 w-full">
+            <div class="mb-4">
+                <label class="text-gray-700">Logotyp</label>
+                <input class="border p-2 w-full" type="file" />
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Företagsnamn</label>
+                <input class="border p-2 w-full" type="text" />
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Address</label>
+                <input class="border p-2 w-full" type="text" />
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Postnr</label>
+                <input class="border p-2 w-full" type="text" />
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Stad</label>
+                <input class="border p-2 w-full" type="text" />
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Org-nr</label>
+                <input class="border p-2 w-full" type="text" />
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Telefonnummer</label>
+                <input class="border p-2 w-full" type="tel" />
+            </div>
+        </div>
+
+        <!-- Kvittorader -->
+        <h2 class="text-2xl font-semibold mb-4 w-full">Kvittorader</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 w-full">
+            <div class="mb-4">
+                <label class="text-gray-700">Kassa</label>
+                <select class="border p-2 w-full">
+                    <option value="kassa1">Kassa 1</option>
+                    <option value="kassa2">Kassa 2</option>
+                    <!-- Add other cash register options -->
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Säljare</label>
+                <select class="border p-2 w-full">
+                    <option value="defaultseller">---</option>
+                    <option value="seller1">Oskar</option>
+                    <option value="seller2">Linus</option>
+                    <option value="seller3">Erick</option>
+
+                    <!-- Add other seller options -->
+                </select>
+            </div>
+
+            <!-- Product List -->
+            <div class="col-span-2">
+                <label class="text-gray-700">Artiklar</label>
+
+                <!-- Product List -->
+                <div class="col-span-2">
+                    @if (products.Any())
+                    {
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                            <div>
+                                <label class="text-gray-700">Artikelnummer</label>
+                            </div>
+                            <div>
+                                <label class="text-gray-700">Produktbeskrivning</label>
+                            </div>
+                            <div>
+                                <label class="text-gray-700">Antal</label>
+                            </div>
+                            <div>
+                                <label class="text-gray-700">Pris</label>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- Product List -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                        @foreach (var product in products)
+                        {
+                            <div>
+                                <input class="border p-2 w-full" type="text" @bind="product.Artikelnummer" />
+                            </div>
+                            <div>
+                                <input class="border p-2 w-full" type="text" @bind="product.Produktbeskrivning" />
+                            </div>
+                            <div>
+                                <input class="border p-2 w-full" type="number" @bind="product.Antal" />
+                            </div>
+                            <div>
+                                <input class="border p-2 w-full" type="text" @bind="product.Pris" @onblur="UpdateTotalAmount"/>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Add Button -->
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @onclick="AddProduct">
+                        Add Product
+                    </button>
+                </div>
+            <!-- Add date/time, price, discount, and notes similarly -->
+        </div>
+
+        <!-- Money -->
+        <h2 class="text-2xl font-semibold mb-4 w-full">Money</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 w-full">
+            <div class="mb-4">
+                <label class="text-gray-700">Totalbelopp</label>
+                <input class="border p-2 w-full" type="text" @bind="totalAmount" readonly /> SEK
+            </div>
+            <div class="mb-4">
+                <label class="text-gray-700">Moms</label>
+                <input class="border p-2 w-full" type="text" @bind="tax" readonly /> SEK
+            </div>
+        </div>
+
+        <!-- Betalsätt -->
+        <h2 class="text-2xl font-semibold mb-4 w-full">Betalsätt</h2>
+        <div class="grid grid-cols-2 gap-4 mb-4 w-full">
+            <div class="flex items-center">
+                <input type="checkbox" id="card" class="mr-2" />
+                <label for="card">Kort</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="invoice" class="mr-2" />
+                <label for="invoice">Faktura</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="cash" class="mr-2" />
+                <label for="cash">Kontant</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="giftCard" class="mr-2" />
+                <label for="giftCard">Presentkort</label>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <h2 class="text-2xl font-semibold mb-4 w-full">Footer</h2>
+        <div class="mb-4 w-full">
+            <label class="text-gray-700">Optional styling area for text and/or images</label>
+            <textarea class="border p-2 w-full"></textarea>
+        </div>
+        <div class="mb-4 w-full">
+            <label class="text-gray-700">Kvittonummer</label>
+            <input class="border p-2 w-full" type="text" readonly />
+        </div>
+
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Submit
+        </button>
+       </div>
+    </div>
+</section>
+
+
+
+
+@code {
+    private string companyName;
+    private string selectedCashRegister;
+    private string selectedSeller;
+    private string totalAmount;
+    private string tax;
+    private string footerText;
+    private string receiptNumber;
+
+    // Model for Product
+    public class ProductModel
+    {
+        public string Artikelnummer { get; set; }
+        public string Produktbeskrivning { get; set; }
+        public int Antal { get; set; }
+        public decimal Pris { get; set; }
+        // Add other properties (Price, etc.) as needed
+    }
+
+    // List of Products
+    List<ProductModel> products = new List<ProductModel>();
+
+    // Method to add a new product to the list
+    private void AddProduct()
+    {
+        products.Add(new ProductModel());
+        CalculateTotalAmount();
+    }
+
+    // Method to update the total amount when typing in the price
+    private void UpdateTotalAmount(FocusEventArgs e)
+    {
+        CalculateTotalAmount();
+    }
+    // Method to calculate the total amount
+    private void CalculateTotalAmount()
+    {
+        decimal total = 0;
+
+        foreach (var product in products)
+        {
+            total += product.Pris * product.Antal;
+        }
+
+        totalAmount = total.ToString("C"); 
+        tax = (total * 0.25m).ToString("C");
+    }
+
+    private List<PaymentMethod> paymentMethods = new List<PaymentMethod>
+    {
+        new PaymentMethod { Id = "card", Name = "Kort", Selected = false },
+        new PaymentMethod { Id = "invoice", Name = "Faktura", Selected = false },
+        new PaymentMethod { Id = "cash", Name = "Kontant", Selected = false },
+        new PaymentMethod { Id = "giftCard", Name = "Presentkort", Selected = false },
+    };
+
+    private async Task SubmitForm()
+    {
+        // Add logic to handle form submission
+        // Generate receipt number, save data, etc.
+        // For demonstration, we'll just log the form data to the console.
+        Console.WriteLine($"Company Name: {companyName}");
+        Console.WriteLine($"Selected Cash Register: {selectedCashRegister}");
+        Console.WriteLine($"Selected Seller: {selectedSeller}");
+        Console.WriteLine($"Total Amount: {totalAmount}");
+        Console.WriteLine($"Tax: {tax}");
+        Console.WriteLine($"Footer Text: {footerText}");
+        Console.WriteLine($"Receipt Number: {receiptNumber}");
+
+        // You can add further logic here, such as saving the data to a database.
+        // For the receipt number, you might want to generate it dynamically based on your requirements.
+
+        // For demonstration, let's simulate a delay and then reset the form.
+        await Task.Delay(2000);
+
+        // Reset the form
+        companyName = string.Empty;
+        selectedCashRegister = string.Empty;
+        selectedSeller = string.Empty;
+        totalAmount = string.Empty;
+        tax = string.Empty;
+        footerText = string.Empty;
+        receiptNumber = GetNextReceiptNumber().ToString();
+
+        // You can also add code to clear the selected payment methods if needed.
+        foreach (var paymentMethod in paymentMethods)
+        {
+            paymentMethod.Selected = false;
+        }
+
+        // Optionally, display a success message or navigate to another page.
+        await JSRuntime.InvokeVoidAsync("alert", "Receipt submitted successfully!");
+    }
+
+    private int nextReceiptNumber = 1;
+
+    private int GetNextReceiptNumber()
+    {
+        return nextReceiptNumber++;
+    }
+
+    public class PaymentMethod
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public bool Selected { get; set; }
+    }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorPlayground")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8bdee689a5e85af58bb0633eb462245e02d0d47")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorPlayground")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorPlayground")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
